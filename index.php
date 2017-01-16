@@ -3,16 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	 
-<?php 
-class StrUtils{
+
+	<?php 
+	class StrUtils{
 
 		private $str="";
 
 		public function __construct($newString){
-	  	$this->str = $newString;
+			$this->str = $newString;
 		}
 
 		function afficher(){
@@ -20,34 +21,39 @@ class StrUtils{
 		}
 
 		function bold(){
-			$bold ="<strong>$this->str</stong>";
+			$bold ="<p><strong>$this->str</stong></p>";
 			return $bold;
 		}
 
 		function Italic(){
-			$Italic ="<i>$this->str</i>";
+			$Italic ="<p><i>$this->str</i></p>";
 			return $Italic;
 		}
 
 		function Capitalize(){
-			$Capital ="<i>$this->str</i>";
+			$Capital ="<p style='text-transform=capitalize'>$this->str</p>";
 			return $Capital;
 		}
 
 	}
 
-	$mastr =new StrUtils ("bla");
+	$mastr =new StrUtils ("Hello world");
 
 	echo $mastr->afficher();
 	echo $mastr->bold();
 	echo $mastr->Italic();
 	echo $mastr->Capitalize();
 
+	$mastr =new StrUtils ("me voici");
+
+	echo $mastr->afficher();
+	?>
 
 
-	//echo $mastr->afficher();
 
-	 ?>
+
+
+
 
 </body>
 </html>
