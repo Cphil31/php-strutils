@@ -1,21 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	 
 <?php 
 class StrUtils{
 
-	private $str = ;
+		private $str="";
 
-	public function bold(){
-		return $this->bold ;
+		public function __construct($newString){
+	  	$this->str = $newString;
+		}
+
+		function afficher(){
+			return $this->str;
+		}
+
+		function bold(){
+			$bold ="<strong>$this->str</stong>";
+			return $bold;
+		}
+
+		function Italic(){
+			$Italic ="<i>$this->str</i>";
+			return $Italic;
+		}
+
+		function Capitalize(){
+			$Capital ="<i>$this->str</i>";
+			return $Capital;
+		}
+
 	}
 
-	public function italic(){
-		return $this->italic ;
-	}
+	$mastr =new StrUtils ("bla");
 
-	public function underline(){
-		return $this->underline ;
-	}
-	public function capitalize(){
-		return $this->capitalize ;
+	echo $mastr->afficher();
+	echo $mastr->bold();
+	echo $mastr->Italic();
+	echo $mastr->Capitalize();
 
-	}
-	?>
+
+
+	//echo $mastr->afficher();
+
+	 ?>
+
+</body>
+</html>
